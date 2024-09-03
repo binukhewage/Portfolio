@@ -26,6 +26,10 @@ const Home = () => {
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase items-center gap-2">
+              <a
+                href="/assets/work/CV.Final.pdf.pdf" // Path to  CV file
+                download // This attribute tells the browser to download the file
+              />
                 <span>Download CV</span>
                 <FiDownload className="text-xl"/>
               </Button>
