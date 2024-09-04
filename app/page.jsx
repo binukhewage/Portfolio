@@ -3,8 +3,11 @@ import {FiDownload} from 'react-icons/fi'
 import Social from "@/components/ui/ui/Social"
 import Photo from "@/components/ui/ui/Photo"
 import Stats from "@/components/ui/ui/Stats"
+
+
 const Home = () => {
   return (
+    
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
@@ -26,11 +29,10 @@ const Home = () => {
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase items-center gap-2">
-              <a
-                href="/assets/work/CV.Final.pdf.pdf" // Path to  CV file
-                download // This attribute tells the browser to download the file
-              />
-                <span>Download CV</span>
+                <a download href="./CV.Final.pdf">
+                Download CV
+                </a>
+                
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
