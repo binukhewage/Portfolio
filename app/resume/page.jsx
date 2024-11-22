@@ -44,7 +44,7 @@ const experience = {
 
     {
       company: "UEXplus",
-      position: "FrontEnd Developer",
+      position: "FrontEnd Developer - Intern",
       duration: "2024-Present"
     },
 
