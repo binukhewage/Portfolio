@@ -43,6 +43,12 @@ const experience = {
     },
 
     {
+      company: "UEXplus",
+      position: "FrontEnd Developer",
+      duration: "2024-Present"
+    },
+
+    {
       company: "Freelance",
       position: "Full Stack Developer",
       duration: "2023-Present"
@@ -231,7 +237,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* Education */}
+            {/* Education */} 
             <TabsContent value="education" className="w-full">
             <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{education.title}</h3>
