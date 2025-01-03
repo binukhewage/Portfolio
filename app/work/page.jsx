@@ -11,8 +11,20 @@ import { Description } from "@radix-ui/react-dialog";
 import WorkSliderBtns from "@/components/ui/ui/WorkSliderBtns";
 
 const projects = [
+
   {
     num: '01',
+    category: 'frontend project',
+    title: 'Travel Website',
+    description: 'Developed an engaging travel website designed to inspire and simplify trip planning. Built with React.js and styled using Tailwind CSS, the platform offers an intuitive interface for users to explore destinations, compare packages, and plan their ideal getaway. The site prioritizes user experience, making travel discovery effortless and enjoyable.',
+    stack: [{name: "ReactJS"}, {name: "Tailwind Css"},],
+    image: '/assets/work/6.png',
+    live: 'https://development.d1q0biyqr94j8d.amplifyapp.com',
+    github: "https://github.com/uexplus/consumer_web",
+  },
+
+  {
+    num: '02',
     category: 'frontend project',
     title: 'Real Estate Website',
     description: 'Developed a user-friendly real estate website that offers an intuitive platform for users to seamlessly search for and explore properties. The site is designed to enhance the property discovery experience, making it easy for users to find their ideal home or investment opportunity.',

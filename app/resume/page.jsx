@@ -1,7 +1,7 @@
 "use clients";
 
 import { University } from 'lucide-react';
-import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaPhp, FaWix, FaWordpress, FaNodeJs} from 'react-icons/fa';
+import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaPhp, FaWix, FaWordpress, FaNodeJs,} from 'react-icons/fa';
 import {SiMysql, SiTailwindcss, SiCanva} from 'react-icons/si';
 
 //About Data
@@ -68,6 +68,13 @@ const education = {
       degree: "Bsc.Computer Science",
       duration: "2022-Present"
     },
+
+    {
+      University: "S.Thomas' College",
+      degree: "GCE Advanced Level",
+      duration: "2022"
+    },
+
   ]
 }
 
