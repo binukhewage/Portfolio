@@ -11,18 +11,16 @@ import { Description } from "@radix-ui/react-dialog";
 import WorkSliderBtns from "@/components/ui/ui/WorkSliderBtns";
 
 const projects = [
-
   {
     num: '01',
     category: 'frontend project',
-    title: 'Travel Website',
-    description: 'Developed an engaging travel website designed to inspire and simplify trip planning. Built with React.js and styled using Tailwind CSS, the platform offers an intuitive interface for users to explore destinations, compare packages, and plan their ideal getaway. The site prioritizes user experience, making travel discovery effortless and enjoyable.',
+    title: 'Job Portal',
+    description: 'Developed a user-friendly job portal website that provides an intuitive platform for users to seamlessly search for and explore job opportunities. The backend, powered by a JSON server, simulates real-world job data, enabling a dynamic and interactive job search experience.',
     stack: [{name: "ReactJS"}, {name: "Tailwind Css"},],
-    image: '/assets/work/6.png',
-    live: 'https://development.d1q0biyqr94j8d.amplifyapp.com',
-    github: "https://github.com/uexplus/consumer_web",
+    image: '/assets/work/7.png',
+    live: 'https://job-portal-sigma-two.vercel.app',
+    github: "https://github.com/binukhewage/JobPortal",
   },
-
   {
     num: '02',
     category: 'frontend project',
@@ -35,7 +33,7 @@ const projects = [
   },
 
   {
-    num: '02',
+    num: '03',
     category: 'frontend project',
     title: 'Fashion Portfolio',
     description: 'Created a visually engaging fashion portfolio website that showcases designs and collections in a stylish, user-friendly format. The site allows users to effortlessly browse through various fashion pieces, providing an immersive experience that highlights creativity and craftsmanship.',
@@ -44,9 +42,19 @@ const projects = [
     live: 'https://sheharamad4.wixsite.com/shehara-madurawala-3',
     github: "",
   },
+  {
+    num: '04',
+    category: 'frontend project',
+    title: 'Travel Website',
+    description: 'Developed an engaging travel website designed to inspire and simplify trip planning. Built with React.js and styled using Tailwind CSS, the platform offers an intuitive interface for users to explore destinations, compare packages, and plan their ideal getaway. The site prioritizes user experience, making travel discovery effortless and enjoyable.',
+    stack: [{name: "ReactJS"}, {name: "Tailwind Css"},],
+    image: '/assets/work/6.png',
+    live: 'https://development.d1q0biyqr94j8d.amplifyapp.com',
+    github: "https://github.com/uexplus/consumer_web",
+  },
 
   {
-    num: '03',
+    num: '05',
     category: 'UI/UX',
     title: 'Crop Management App Design',
     description: 'Designed a user-friendly UI tailored for farmers, simplifying crop management and making it easy to monitor and manage their fields. The intuitive interface streamlines tasks, helping farmers efficiently track growth, plan harvests, and optimize crop yields with ease.',
