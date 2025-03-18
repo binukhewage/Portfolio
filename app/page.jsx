@@ -29,7 +29,7 @@ const Home = () => {
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase items-center gap-2">
-                <a download href="./BinukHewageCV.pdf">
+                <a download href="./CV.Final.pdf">
                 Download CV
                 </a>
                 
