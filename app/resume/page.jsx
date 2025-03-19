@@ -2,7 +2,7 @@
 
 import { University } from 'lucide-react';
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaPhp, FaWix, FaWordpress, FaNodeJs,} from 'react-icons/fa';
-import {SiMysql, SiTailwindcss, SiCanva} from 'react-icons/si';
+import {SiMysql, SiTailwindcss, SiCanva, SiMongodb, SiExpress} from 'react-icons/si';
 
 //About Data
 
@@ -86,23 +86,28 @@ const skills = {
   description: "Through my academic journey at university and hands-on experience in the industry, I have developed a strong skill set in web development and designing. These experiences have equipped me with the technical and creative abilities essential for building dynamic, user-friendly websites and applications.",
   skillList: [
     {
-      icon: <FaHtml5/>,
-      name: "html 5"
+      icon: <FaReact/>,
+      name: "react.js"
+    },
+    
+    {
+      icon: <FaNodeJs/>,
+      name: "node.js"
     },
 
     {
-      icon: <FaCss3/>,
-      name: "css 3"
+      icon: <SiExpress/>,
+      name: "ExpressJs"
+    },
+
+    {
+      icon: <SiMongodb/>,
+      name: "MongoDB"
     },
 
     {
       icon: <FaJs/>,
       name: "javascript"
-    },
-
-    {
-      icon: <FaReact/>,
-      name: "react.js"
     },
 
     {
@@ -121,11 +126,6 @@ const skills = {
     },
 
     {
-      icon: <FaNodeJs/>,
-      name: "node.js"
-    },
-
-    {
       icon: <FaFigma/>,
       name: "figma"
     },
@@ -134,7 +134,17 @@ const skills = {
       icon: <FaWordpress/>,
       name: "wordPress"
     },
+ 
+    {
+      icon: <FaHtml5/>,
+      name: "html 5"
+    },
 
+    {
+      icon: <FaCss3/>,
+      name: "css 3"
+    },
+    
     {
       icon: <FaWix/>,
       name: "wix"
@@ -142,7 +152,7 @@ const skills = {
 
     {
       icon: <SiCanva/>,
-      name: "canva"
+      name: "Canva"
     },
 
   ]
