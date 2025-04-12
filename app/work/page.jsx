@@ -1,21 +1,22 @@
 "use client";
 
-import React from "react";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
+import React, { useState } from "react";
+import { BsArrowUpRight, BsGithub, BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 
 const projects = [
+  // ... (your existing projects array)
   {
     num: '01',
-    category: 'frontend project',
-    title: 'Job Portal',
-    description: 'Developed a user-friendly job portal website that provides an intuitive platform for users to seamlessly search for and explore job opportunities. The backend, powered by a JSON server, simulates real-world job data, enabling a dynamic and interactive job search experience.',
-    stack: [{ name: "ReactJS" }, { name: "Tailwind Css" }],
-    image: '/assets/work/7.png',
-    live: 'https://job-portal-sigma-two.vercel.app',
-    github: "https://github.com/binukhewage/JobPortal",
+    category: 'fullstack project',
+    title: 'Environmental Condition Monitoring System',
+    description: 'The Environmental Condition Monitoring System (ECMS) is a real-time dashboard web application developed using the MERN Stack . It allows users to monitor and manage environmental conditions across multiple IoT devices in real time',
+    stack: [{ name: "ReactJS" }, { name: "MongoDB" },{ name: "ExpressJs" }, { name: "NodeJs" }, { name: "Tailwind Css" }],
+    image: '/assets/work/8.png',
+    live: '',
+    github: "https://github.com/binukhewage/Environmental-Condition-Monitoring-System",
   },
   {
     num: '02',
@@ -24,7 +25,7 @@ const projects = [
     description: 'Developed a user-friendly real estate website that offers an intuitive platform for users to seamlessly search for and explore properties. The site is designed to enhance the property discovery experience, making it easy for users to find their ideal home or investment opportunity.',
     stack: [{ name: "ReactJS" }, { name: "Html" }, { name: "Css" }],
     image: '/assets/work/1.png',
-    live: '',
+    live: 'https://real-estate-website-brown.vercel.app',
     github: "https://github.com/binukhewage/Real-Estate-Website",
   },
   {
@@ -56,106 +57,114 @@ const projects = [
     image: '/assets/work/3.png',
     live: '',
     github: "",
-  },
+  }
 ];
 
 const Work = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextProject = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevProject = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="relative group cursor-pointer rounded-lg overflow-hidden h-[400px]"
-            >
-              {/* Project Image */}
-              <div className="absolute inset-0">
-                <Image
-                  src={project.image}
-                  fill
-                  className="object-cover"
-                  alt={project.title}
-                />
-              </div>
+      <div className="container mx-auto px-4">
+        
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 backdrop-blur-none group-hover:backdrop-blur-sm group-hover:bg-black/70 transition-all duration-300"></div>
-
-              {/* Default Content (Title and Category) */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 transition-all duration-300 group-hover:opacity-0">
-                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
-                <p className="text-sm text-white/60 uppercase mt-2">
-                  {project.category}
-                </p>
-              </div>
-
-              {/* Hover Content (Description, Stack, Buttons) */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="text-white">
-                  {/* Project Number and Category */}
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-bold text-accent">
-                      {project.num}
-                    </span>
-                    <span className="text-sm uppercase text-white/60">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  {/* Project Description */}
-                  <p className="text-sm text-white/80 mb-4">{project.description}</p>
-
-                  {/* Tech Stack */}
-                  <ul className="flex gap-2 flex-wrap mb-4">
-                    {project.stack.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-accent bg-white/10 px-2 py-1 rounded-full"
-                      >
-                        {item.name}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Buttons */}
-                  <div className="flex items-center gap-4">
-                    {/* Live Project Button */}
-                    {project.live && (
-                      <Link href={project.live}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group hover:bg-white/10 transition-all">
-                              <BsArrowUpRight className="text-white text-xl group-hover:text-accent" />
-                              <TooltipContent>
-                                <p>Live Project</p>
-                              </TooltipContent>
-                            </TooltipTrigger>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </Link>
-                    )}
-
-                    {/* GitHub Button */}
-                    {project.github && (
-                      <Link href={project.github}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group hover:bg-white/10 transition-all">
-                              <BsGithub className="text-white text-xl group-hover:text-accent" />
-                              <TooltipContent>
-                                <p>GitHub</p>
-                              </TooltipContent>
-                            </TooltipTrigger>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              </div>
+        <div className="flex flex-col lg:flex-row gap-8 items-center">
+          {/* Image Carousel */}
+          <div className="relative w-full lg:w-1/2 h-[400px] rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src={projects[currentIndex].image}
+              fill
+              className="object-cover"
+              alt={projects[currentIndex].title}
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-between p-4">
+              <button 
+                onClick={prevProject}
+                className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all"
+              >
+                <BsChevronLeft className="text-white text-xl" />
+              </button>
+              <button 
+                onClick={nextProject}
+                className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all"
+              >
+                <BsChevronRight className="text-white text-xl" />
+              </button>
             </div>
-          ))}
+            <div className="absolute bottom-4 left-4 flex gap-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-accent w-6' : 'bg-white/50'}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Project Details */}
+          <div className="w-full lg:w-1/2">
+            <div className="mb-4 flex items-center gap-4">
+              <span className="text-accent font-bold text-2xl">
+                {projects[currentIndex].num}
+              </span>
+              <span className="text-sm uppercase text-gray-500">
+                {projects[currentIndex].category}
+              </span>
+            </div>
+            
+            <h3 className="text-3xl font-bold text-white-900 mb-4">
+              {projects[currentIndex].title}
+            </h3>
+            
+            <p className="text-gray-600 mb-6">
+              {projects[currentIndex].description}
+            </p>
+            
+            <div className="flex flex-wrap gap-2 mb-6">
+              {projects[currentIndex].stack.map((tech, i) => (
+                <span
+                  key={i}
+                  className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full border border-accent/20"
+                >
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+            
+            <div className="flex gap-4">
+              {projects[currentIndex].live && (
+                <Link
+                  href={projects[currentIndex].live}
+                  target="_blank"
+                  className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all"
+                >
+                  Live Demo <FiExternalLink className="text-sm" />
+                </Link>
+              )}
+              {projects[currentIndex].github && (
+                <Link
+                  href={projects[currentIndex].github}
+                  target="_blank"
+                  className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all"
+                >
+                  View Code <BsGithub className="text-sm" />
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
