@@ -2,7 +2,7 @@
 
 import { University } from 'lucide-react';
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaPhp, FaWix, FaWordpress, FaNodeJs,} from 'react-icons/fa';
-import {SiMysql, SiTailwindcss, SiCanva, SiMongodb, SiExpress} from 'react-icons/si';
+import {SiMysql, SiTailwindcss, SiCanva, SiMongodb, SiExpress, SiNextdotjs } from 'react-icons/si';
 
 //About Data
 
@@ -37,15 +37,20 @@ const experience = {
   description: 'As a Full Stack Developer, I have acquired extensive experience across various programming languages and technologies. My work in diverse organizations has provided me with a well-rounded skill set, enabling me to contribute effectively to both front-end and back-end development.',
   items: [
     {
+      company: "ORAGAN",
+      position: "Software Engineer",
+      duration: "June 2025 - Present"
+    },
+    {
       company: "Sri Lanka Telecom",
       position: "Full Stack Developer - Intern",
-      duration: "2024-Present"
+      duration: "June 2024 - June 2025"
     },
 
     {
       company: "UEXplus",
       position: "FrontEnd Developer - Intern",
-      duration: "2024-Present"
+      duration: "Nov 2024 - Present"
     },
 
     {
@@ -103,6 +108,11 @@ const skills = {
     {
       icon: <SiMongodb/>,
       name: "MongoDB"
+    },
+
+    {
+      icon: <SiNextdotjs/>,
+      name: "Next.js"
     },
 
     {
