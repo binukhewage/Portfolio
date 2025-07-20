@@ -10,12 +10,12 @@ const projects = [
   {
     num: '01',
     category: 'fullstack project',
-    title: 'Agro Pulse',
-    description: 'Agro Pulse is a full-stack agriculture management web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It aims to digitally transform agricultural processes by providing farmers, buyers, and agricultural officers with a smart, interactive platform for real-time data sharing, farm monitoring, and resource management.',
+    title: 'GOAT CULT',
+    description: 'GOATCULT is a full-stack streetwear e-commerce platform built using the MERN stack—MongoDB, Express.js, React.js, and Node.js—designed to deliver a smooth, responsive, and visually striking user experience. The frontend is developed with React.js and Tailwind CSS, offering a mobile-first interface that reflects the brands bold identity. The platform features full e-commerce functionality including add-to-cart, wishlist, and secure checkout with Stripe/PayPal integration. supporting role-based access for buyers and admins. A custom admin dashboard allows seamless management of products, inventory, and orders.',
     stack: [{ name: "ReactJS" }, { name: "MongoDB" },{ name: "ExpressJs" }, { name: "NodeJs" }, { name: "Tailwind Css" }],
-    image: '/assets/work/1.png',
-    live: '',
-    github: "https://github.com/binukhewage/Agro-Pulse",
+    image: '/assets/work/9.png',
+    live: 'https://www.goatcult.lk',
+    github: "https://github.com/binukhewage/goatco",
   },
   {
     num: '02',
@@ -57,26 +57,6 @@ const projects = [
     live: 'https://sheharamad4.wixsite.com/shehara-madurawala-3',
     github: "",
   },
-  {
-    num: '06',
-    category: 'frontend project',
-    title: 'Travel Website',
-    description: 'Developed an engaging travel website designed to inspire and simplify trip planning. Built with React.js and styled using Tailwind CSS, the platform offers an intuitive interface for users to explore destinations, compare packages, and plan their ideal getaway. The site prioritizes user experience, making travel discovery effortless and enjoyable.',
-    stack: [{ name: "ReactJS" }, { name: "Tailwind Css" }],
-    image: '/assets/work/6.png',
-    live: 'https://development.d1q0biyqr94j8d.amplifyapp.com',
-    github: "https://github.com/uexplus/consumer_web",
-  },
-  {
-    num: '07',
-    category: 'UI/UX',
-    title: 'Crop Management App Design',
-    description: 'Designed a user-friendly UI tailored for farmers, simplifying crop management and making it easy to monitor and manage their fields. The intuitive interface streamlines tasks, helping farmers efficiently track growth, plan harvests, and optimize crop yields with ease.',
-    stack: [{ name: "Figma" }],
-    image: '/assets/work/6.png',
-    live: '/assets/work/7.png',
-    github: "",
-  }
 ];
 
 const Work = () => {
