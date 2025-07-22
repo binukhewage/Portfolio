@@ -34,7 +34,7 @@ const projects = [
     description: 'The Environmental Condition Monitoring System (ECMS) is a real-time dashboard web application developed using the MERN Stack . It allows users to monitor and manage environmental conditions across multiple IoT devices in real time',
     stack: [{ name: "ReactJS" }, { name: "MongoDB" },{ name: "ExpressJs" }, { name: "NodeJs" }, { name: "Tailwind Css" }],
     image: '/assets/work/3.png',
-    live: '',
+    live: 'https://environmental-condition-monitoring-psi.vercel.app',
     github: "https://github.com/binukhewage/Environmental-Condition-Monitoring-System",
   },
   {
