@@ -11,6 +11,7 @@ import Image from "next/image";
 
 // Icons for skills
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
 import {
   SiMysql,
   SiTailwindcss,
@@ -143,7 +144,7 @@ const experience = [
   {
     company: "UEXplus",
     position: "FrontEnd Developer - Intern",
-    duration: "Nov 2024 - Present",
+    duration: "Nov 2024 - May 2025",
   },
 ];
 
@@ -169,7 +170,7 @@ const skills = [
   { icon: <FaJs />, name: "JavaScript" },
   { icon: <SiTailwindcss />, name: "Tailwind.css" },
   { icon: <SiMysql />, name: "MySQL" },
-  { icon: <FaHtml5 />, name: "HTML 5" },
+  { icon: <IoLogoFirebase />, name: "Firebase" },
   { icon: <FaCss3 />, name: "CSS 3" },
 ];
 
@@ -238,7 +239,9 @@ const Home = () => {
                   className="object-cover xl:w-[390px] xl:h-[550px] xs:w-[350px] xs:h-[350px]"
                   priority
                 />
-                <div className="absolute inset-0 hover:bg-transparent transition-all duration-500" />
+
+                {/* Shade Overlay */}
+                <div className="absolute inset-0 bg-black/30 hover:bg-black/10 transition-all duration-500 rounded-full" />
               </motion.div>
             </motion.div>
 
