@@ -193,7 +193,7 @@ const projects = [
   {
     title: "GOAT CULT",
     description:
-      "Full-stack streetwear e-commerce platform built using the MERN stack with Stripe/PayPal integration and admin dashboard.",
+      "Full-stack streetwear e-commerce platform built using the MERN stack with admin dashboard.",
     stack: ["ReactJS", "MongoDB", "ExpressJs", "NodeJs", "Tailwind CSS"],
     image: "/assets/work/9.png",
     live: "https://www.goatcult.lk",
